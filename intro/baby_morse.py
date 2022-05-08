@@ -1,20 +1,9 @@
-# Baby Morse
-Categories: intro, hardware
+"""
+@author Corentin Goetghebeur (github.com/CorentinGoet)
 
-## Challenge
-For this challenge, we have to send FLAG to the CTF server on a specific port.
+Python script for the FCSC 2022 baby_morse challenge.
+"""
 
-```shell
-nc challenges.france-cybersecurity-challenge.fr 2250
-```
-
-## Write-up
-By reading the challenge name, we can guess that we have to send the word FLAG
-in morse code to the server.
-To translate into morse code and to communicate with the server, I used a Python script.
-(available [here](baby_morse.py)).
-
-```python
 from pwn import *
 import numpy as np
 
@@ -74,5 +63,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-```
-
