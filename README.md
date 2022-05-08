@@ -4,6 +4,9 @@ This repository contains the write-ups for the 2022 edition of the France CyberS
 
 ## Results
 
+For this challenge, I got 1006 points, which translates to:
+- 125th / 646 in the senior category (1997-2002)
+- 293rd / 1524 in the global leaderboard
 
 ## Write-ups
 - Intro
