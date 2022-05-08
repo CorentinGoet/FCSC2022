@@ -1,19 +1,8 @@
-# QR code
+"""
+@author Corentin Goetghebeur (github.com/CorentinGoet)
+Python script for the FCSC 2022 QRcode challenge
+"""
 
-Categories: intro, misc
-
-## Challenge
-For this challenge, we have to read the information contained in a
-faulty QR code:
-![faulty_qr_code](flag.png)
-
-## Write-up
-In order to read this QR code, we have to add the missing black
-squares in the corner.
-This can be done using an image editor, but I made a Python script to
-add the missing squares and read the QR code. (it can be found [here](QRcode.py)).
-
-```python
 from PIL import Image
 import numpy as np
 from pyzbar.pyzbar import decode
@@ -56,9 +45,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-```
-
-We get the corrected QR code picture:
-![corrected qr](QRcorrected.png)
-
-and the content of the QR code is the flag.

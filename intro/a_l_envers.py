@@ -1,5 +1,7 @@
 """
 @author Corentin Goetghebeur (github.com/CorentinGoet)
+
+Python script for the FCSC 2022 à l'envers challenge.
 """
 
 from pwn import *   # library used to connect to the server
