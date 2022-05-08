@@ -1,31 +1,13 @@
-# Guess Me
+"""
+@author Corentin Goetghebeur (github.com/CorentinGoet)
+"""
 
-Category: misc
+from pwn import *
 
-## Challenge
+HOST = "challenges.france-cybersecurity-challenge.fr"
+PORT = 2001
 
-For this challenge, we have 5 minutes to guess 16 random numbers.
-After each guess the server answers:
-- +1 if our guess is too low
-- -1 if our guess is too high
 
-We also get the [source code](guessme.py) for the server.
-
-## Write-up
-
-By looking into the server code, we find that the random numbers to guess
-are between 0 and 2^64 - 1. Since there are so many different possibilities for
-the guesses, I will use a binary search.
-
-In the beginning, the limits are [0, 1<<64],
-with each step, we guess the middle of the interval.
-
-With this method, since there are 2^64 possibilities it takes 64 steps
-to find each number.
-
-I implemented this method into a [Python script](guessme_breaker.py).
-
-```python
 def main():
     """
     Main function
@@ -74,5 +56,7 @@ def main():
             c.recvuntil(b"> ")
         num2guess -= 1
     print(c.recv())
-```
 
+
+if __name__ == '__main__':
+    main()
